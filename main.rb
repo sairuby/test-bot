@@ -9,7 +9,8 @@ require 'pry'
 
 
 post '/wikepedia' do
-binding.pry
+puts " hello in post call"
+	"hello in postcall"
 end
 get '/hello' do
 	" hello"
