@@ -10,12 +10,12 @@ require 'pry'
 
 post '/testcall' do
   puts " hello in post call"
-  "hello in postcall"
+  #"hello in postcall"
   #{
    # "text": "My response"
   #}
   content_type :json
-  { :key1 => 'hello', :key2 => 'testuser' }.to_json
+  { :text => 'hello'}.to_json
   
 end
 get '/hello' do
