@@ -9,8 +9,12 @@ require 'pry'
 
 
 post '/testcall' do
-puts " hello in post call"
-	"hello in postcall"
+  puts " hello in post call"
+  "hello in postcall"
+  {
+    "text": "My response"
+  }
+  
 end
 get '/hello' do
 	" hello"
