@@ -11,9 +11,11 @@ require 'pry'
 post '/testcall' do
   puts " hello in post call"
   "hello in postcall"
-  {
-    "text": "My response"
-  }
+  #{
+   # "text": "My response"
+  #}
+  content_type :json
+  { :key1 => 'hello', :key2 => 'testuser' }.to_json
   
 end
 get '/hello' do
