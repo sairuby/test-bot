@@ -8,7 +8,7 @@ require 'fileutils'
 require 'pry'
 
 
-post '/wikipedia' do
+post '/testcall' do
 puts " hello in post call"
 	"hello in postcall"
 end
