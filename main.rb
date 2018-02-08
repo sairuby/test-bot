@@ -16,9 +16,9 @@ post '/testcall' do
   #
 	binding.pry
 	"#{session.inspect}
-	
- # content_type :json
-  #{ :text => 'hello'}.to_json
+		
+  content_type :json
+  { :text => 'hello'}.to_json
   
 end
 get '/hello' do
