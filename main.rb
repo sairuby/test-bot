@@ -9,13 +9,14 @@ require 'pry'
 
 
 post '/testcall' do
-  puts " hello in post call"
+	tes111 = params['text']
+ # puts " hello in post call"
   #"hello in postcall"
   #{
    # "text": "My response"
   #
 	#binding.pry
-	"#{session.inspect}
+	#"#{session.inspect}
 		
   content_type :json
   { :text => 'hello'}.to_json
