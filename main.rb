@@ -9,7 +9,7 @@ require 'pry'
 
 
 post '/testcall' do
-	request_data = JSON.parse(request.body.read)
+	#request_data = JSON.parse(request.body.read)
 	
  # puts " hello in post call"
   #"hello in postcall"
