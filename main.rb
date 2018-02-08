@@ -13,11 +13,11 @@ post '/testcall' do
   #"hello in postcall"
   #{
    # "text": "My response"
-  #}
-	puts session.inspect
+  #
+	"#{session.inspect}
 	
-  content_type :json
-  { :text => 'hello'}.to_json
+ # content_type :json
+  #{ :text => 'hello'}.to_json
   
 end
 get '/hello' do
