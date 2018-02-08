@@ -14,6 +14,7 @@ post '/testcall' do
   #{
    # "text": "My response"
   #
+	binding.pry
 	"#{session.inspect}
 	
  # content_type :json
