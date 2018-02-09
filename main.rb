@@ -10,8 +10,8 @@ require 'pry'
 
 post '/testcall' do
 	binding.pry
-	request.body.read
-	
+	#request.body.read
+	puts " hello"
  # puts " hello in post call"
   #"hello in postcall"
   #{
