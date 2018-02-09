@@ -9,9 +9,9 @@ require 'pry'
 
 
 post '/testcall' do
-	binding.pry
+	#binding.pry
 	#request.body.read
-	puts " hello"
+	#puts " hello"
  # puts " hello in post call"
   #"hello in postcall"
   #{
@@ -21,7 +21,7 @@ post '/testcall' do
 	#"#{session.inspect}
 	h = "hello"	
   content_type :json
-  { :text => "#{request.body.read} "}.to_json
+  { :text => "#{request.methods} "}.to_json
   
 end
 get '/hello' do
