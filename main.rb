@@ -9,7 +9,7 @@ require 'pry'
 
 
 post '/testcall' do
-	#request_data = JSON.parse(request.body.read)
+	request.body.read
 	
  # puts " hello in post call"
   #"hello in postcall"
@@ -20,7 +20,7 @@ post '/testcall' do
 	#"#{session.inspect}
 	h = "hello"	
   content_type :json
-  { :text => "#{h}"}.to_json
+  { :text => "#{request.body} "}.to_json
   
 end
 get '/hello' do
