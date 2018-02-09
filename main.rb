@@ -12,10 +12,12 @@ post '/testcall' do
 	#binding.pry
 	a = request.params['text']
 	b = request.params['trigger_word']
-	#h = a.slice! b
+	h = a.slice! b
+	"#{h}"
+	puts "#{h}"
   content_type :json
   #{ :text => "#{request.content_type} \n  #{request.params.class} #{request.params['text']} #{request.params['trigger_word']}"}.to_json
-  #{:text => "#{a}"}.to_json
+  {:text => "hello"}.to_json
 end
 get '/hello' do
 	" hello"
