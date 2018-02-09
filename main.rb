@@ -20,7 +20,7 @@ post '/testcall' do
 	#"#{session.inspect}
 	h = "hello"	
   content_type :json
-  { :text => "#{request.body} "}.to_json
+  { :text => "#{request.body.read} "}.to_json
   
 end
 get '/hello' do
