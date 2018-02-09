@@ -21,7 +21,7 @@ post '/testcall' do
 	#"#{session.inspect}
 	h = "hello"	
   content_type :json
-  { :text => "#{request.methods} "}.to_json
+  { :text => "#{request.content_type} \n  #{request.params} #{request.cookies}"}.to_json
   
 end
 get '/hello' do
