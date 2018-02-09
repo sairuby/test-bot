@@ -15,7 +15,7 @@ post '/testcall' do
 	#h = a.slice! b
   content_type :json
   #{ :text => "#{request.content_type} \n  #{request.params.class} #{request.params['text']} #{request.params['trigger_word']}"}.to_json
-  {:text => "#{a}"}.to_json
+  #{:text => "#{a}"}.to_json
 end
 get '/hello' do
 	" hello"
