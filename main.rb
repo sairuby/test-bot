@@ -23,7 +23,7 @@ post '/testcall' do
 	request = Net::HTTP::Get.new(url)
 	request["Authorization"] = 'Basic NTAyNDEyMjMyOlMzcnZpYzNuMHc='
 	response = http.request(request)
-	data1 = response.read_body
+	data1 = JSON.parse(response.read_body)
 	#url1 = "https://geapplight.service-now.com/api/now/v1/table/cmdb_ci_service?sysparm_query=name=#{a}&sysparm_fields=u_technical_contact_sso_1&displayvalue=true"
 	#uri = URI(a)
 	#http.use_ssl = true
