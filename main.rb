@@ -28,9 +28,21 @@ request["authorization"] = 'Basic NTAyNDEyMjMyOlMzcnZpYzNuMHc='
 response = http.request(request)
 puts response.read_body
 	data1 = JSON.parse(response.read_body)
-	idvalue = data1['result'][0]['u_technical_contact_sso_1']['value']
+	url2 = idvalue = data1['result'][0]['u_technical_contact_sso_1']["link"]
+	
+	
+	url = URI("https://geapplight.service-now.com/api/now/v1/table/sys_user/8ee727de0a0a3ca90042fe40d1bde53b")
+	http = Net::HTTP.new(url.host, url.port)
+	http.use_ssl = true
+	http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+	request = Net::HTTP::Get.new(url)
+	request["authorization"] = 'Basic NTAyNDEyMjMyOlMzcnZpYzNuMHc='
+	response = http.request(request)
+	jsonresult = JSON.parse(response.body)
+	result1 = jsonresult['result']['u_display_name']
   	content_type :json
-   	{:text => "#{idvalue}"}.to_json
+   	{:text => "#{result1}"}.to_json
 end
 get '/hello' do
 	" hello"
