@@ -32,7 +32,7 @@ puts response.read_body
 	data1 = JSON.parse(response.read_body)
 	data2 = "hello"
   	content_type :json
-   	{:text => "#{data2}"}.to_json
+   	{:text => "#{data1}"}.to_json
 end
 get '/hello' do
 	" hello"
