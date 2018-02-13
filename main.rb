@@ -24,15 +24,13 @@ post '/testcall' do
 
 request = Net::HTTP::Get.new(url)
 request["authorization"] = 'Basic NTAyNDEyMjMyOlMzcnZpYzNuMHc='
-request["cache-control"] = 'no-cache'
-request["postman-token"] = 'e5389d56-52fc-1e23-50e7-8b4f215ff28f'
 
 response = http.request(request)
 puts response.read_body
 	data1 = JSON.parse(response.read_body)
-	data2 = "hello"
+	idvalue = data1['result'][0]['u_technical_contact_sso_1']['value']
   	content_type :json
-   	{:text => "#{data1}"}.to_json
+   	{:text => "#{idvalue}"}.to_json
 end
 get '/hello' do
 	" hello"
