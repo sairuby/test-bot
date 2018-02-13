@@ -20,7 +20,7 @@ post '/testcall' do
   http.use_ssl = true
   http.verify_mode = OpenSSL::SSL::VERIFY_NONE
   request = Net::HTTP::Get.new(url)
-  request["authorization"] = 'Basic NTAyNDEyMjMyOlMzcnZpYzNuMHc='
+  request["authorization"] = key  # key in environment value
   response = http.request(request)
   data1 = JSON.parse(response.read_body)
   url2 = idvalue = data1['result'][0]['u_technical_contact_sso_1']["link"]
