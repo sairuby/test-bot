@@ -11,7 +11,7 @@ require 'net/http'
 
 
 post '/testcall' do
-	binding.pry
+	#binding.pry
 	a = request.params['text']
 	b = request.params['trigger_word']
 	h = a.slice! b
