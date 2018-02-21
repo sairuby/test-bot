@@ -9,7 +9,7 @@ require 'pry'
 require 'uri'
 require 'net/http'
 
-
+ 
 post '/testcall' do
 
   a = request.params['text']
