@@ -29,7 +29,7 @@ post '/testcall' do
   http.use_ssl = true
   http.verify_mode = OpenSSL::SSL::VERIFY_NONE
   request = Net::HTTP::Get.new(url)
-  request["authorization"] = 'Basic NTAyNDEyMjMyOlMzcnZpYzNuMHc='
+  request["authorization"] = ""
   response = http.request(request)
   jsonresult = JSON.parse(response.body)
   result1 = jsonresult['result']['u_display_name']
